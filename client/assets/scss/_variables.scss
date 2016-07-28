@@ -12,7 +12,7 @@ $color-gold-hockeypockey-dark: #C6A42E;
 
 /* Colors by functionality */
 $color-text-primary: $color-gray-capecod;
-$color-text-light: $color-white;
+$color-text-light: $color-gray-lighter;
 $color-primary: $color-gold-hockeypockey-light;
 $color-primary-shadow: $color-gold-hockeypockey-dark;
 $color-background: $color-gray-cod;
@@ -20,11 +20,13 @@ $color-input-bg: $color-white;
 $color-input-bg-disabled: $color-gray-lighter;
 $color-input-border: $color-gray-light;
 $color-input-border-focus: $color-gold-hockeypockey-light;
-$color-input-placeholder:$color-gray-mid;
+$color-input-placeholder: $color-gray-mid;
 
 /* Typography */
 $font-size-base: 14px;
 $line-height-base: 1.428571429; // 20/14
+$font-family-serif: "Merriweather", serif;
+$font-family-sanserif: "Open Sans", sans-serif;
 
 /* Margins and paddings */
 $padding-base-vertical: 6px;
@@ -45,7 +47,7 @@ $retina: "(-webkit-min-device-pixel-ratio: 2)";
 
 /* forms and inputs */
 // $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
-$input-height-base: 34px;
+$input-height-base: 44px;
 
 //** Disabled cursor for form controls and buttons.
 $cursor-disabled:                not-allowed;

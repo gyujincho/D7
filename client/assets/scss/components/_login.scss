@@ -1,0 +1,33 @@
+.login-header {
+  margin-bottom: 60px;
+}
+
+.login-title {
+}
+
+.login-description {
+  font-family: $font-family-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.login-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+  left: -15px;
+  font-size: $font-size-base;
+
+  a,
+  a:visited,
+  a:focus,
+  a:link,
+  a:active {
+    color: #BFBFBF;
+  }
+
+  a:hover {
+    // color: #BFBFBF;
+    text-decoration: underline;
+  }
+}

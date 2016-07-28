@@ -1,0 +1,91 @@
+/* Sidebar */
+.sidebar {
+  left: -100%;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  background: #202020;
+  transition: all 0.5s;
+  z-index: 10;
+  padding-top: 30px;
+  color: white;
+}
+
+.sidebarBg {
+  left: -100%;
+}
+
+.sidebarBg .close {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+}
+
+.sidebar .userphoto img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.sidebar .userinfo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sidebar .userinfo .username {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.sidebar .userinfo .userstats {
+  color: #8A8A8A;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.sidebar .menu {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.sidebar .menu ul li {
+  border-bottom: 1px solid #545454;
+}
+
+.sidebar .menu ul li:last-child {
+  border-bottom: none;
+}
+
+.sidebar .menu ul li a {
+  line-height: 3rem;
+  vertical-align: middle;
+  color: #F1F1F1;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.sidebar .menu ul li a:hover {
+  /*background-color: #fafcfd;*/
+}
+
+.sidebar .menu ul li .ongoing a {
+  /*color: #93a3b5;*/
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar .menu ul li .ongoing li {
+  border-bottom: none;
+}

@@ -65,21 +65,23 @@ class Login extends Component {
     if(!this.state.isSignup){
       return (
         <div className="login-container">
-          <h1>D7</h1>
-          <h4>Do something every single day</h4>
+          <div className="login-header">
+            <h1 className="login-title">D7</h1>
+            <h4 className="login-description">Do something every single day</h4>
+          </div>
           <form onSubmit={this.login.bind(this)}>
-            <div className="inputGroup">
-              <input type="email" name="email" value={this.state.email} className="form-control" onChange={this.handleChange.bind(this, "email")} placeholder="email" style={{height: "44px"}} required/>
-              <input type="password" name="password" value={this.state.password} className="form-control" onChange={this.handleChange.bind(this, "password")} placeholder="password" style={{height: "44px"}} required/>
+            <div className="input-group">
+              <input type="email" name="email" value={this.state.email} className="form-control" onChange={this.handleChange.bind(this, "email")} placeholder="email" required/>
+              <input type="password" name="password" value={this.state.password} className="form-control" onChange={this.handleChange.bind(this, "password")} placeholder="password" required/>
+              <button type="submit" className="btn btn-primary">Login</button>
             </div>
-            <button type="submit" className="btn btn-lg btn-primary btn-block">Login</button>
           </form>
           {/*<p>
             <span>or login with:</span><br />
             <button type="button">Google</button>
           </p>*/}
-          <div className="gotoSignup text-center">
-            <a onClick={this.setState.bind(this, {isSignup:true})}>Sign up for D7</a>
+          <div className="login-footer">
+            <a onClick={this.setState.bind(this, {isSignup:true})}>Sign up for D7 &#8594;</a>
           </div>
 
         </div>
@@ -87,18 +89,25 @@ class Login extends Component {
     } else {
       return (
         <div className="login-container">
-          <h1 className="form-signin-heading">D7</h1>
-          <h4>Do something every single day</h4>
-          <form className="form-signin" onSubmit={this.signup.bind(this)}>
-            <input type="email" name="email" value={this.state.email} className="form-control" onChange={this.handleChange.bind(this, "email")} placeholder="email" style={{height: "44px"}} required/>
-            <input type="password" name="password" value={this.state.password} className="form-control" onChange={this.handleChange.bind(this, "password")} placeholder="password" style={{height: "44px"}} required/>
-            <input type="text" name="name" value={this.state.name} className="form-control" onChange={this.handleChange.bind(this, "name")} placeholder="name" style={{height: "44px"}} required/>
-            {/**/}
-            <div className="checkbox">
-              <label><input type="checkbox" defaultChecked="true" />Agree for terms of use</label>
+          <div className="login-header">
+            <h1 className="login-title">D7</h1>
+            <h4 className="login-description">Do something every single day</h4>
+          </div>
+          <form onSubmit={this.signup.bind(this)}>
+            <div className="input-group">
+              <input type="email" name="email" value={this.state.email} className="form-control" onChange={this.handleChange.bind(this, "email")} placeholder="email" required />
+              <input type="password" name="password" value={this.state.password} className="form-control" onChange={this.handleChange.bind(this, "password")} placeholder="password" required />
+              <input type="text" name="name" value={this.state.name} className="form-control" onChange={this.handleChange.bind(this, "name")} placeholder="name" required />
+              <div className="checkbox">
+                <input type="checkbox" defaultChecked="false" /> Agree for terms of use
+              </div>
+              <button type="submit" className="btn btn-primary">Sign up & Login</button>
             </div>
-            <button type="submit" className="btn btn-lg btn-primary btn-block">Sign up & Login</button>
           </form>
+          <div className="login-footer">
+            <a onClick={this.setState.bind(this, {isSignup: false})}>&#8592;
+ Back to login page</a>
+          </div>
         </div>
       );
     }

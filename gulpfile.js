@@ -14,7 +14,7 @@ var paths = {
   },
   exclude: {
     server: ["!node_modules/**"],
-    client: ["!client/bundle.js", "!client/helpers/*.js"]
+    client: ["!client/bundle.js", "!client/helpers/*.js", "!client/assets/**"]
   }
 };
 
