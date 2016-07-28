@@ -1,0 +1,91 @@
+/* Web fonts */
+
+@mixin font-face($family, $file) {
+  @font-face {
+    font-family: $family;
+    src: url("#{$path-font}/#{$file}-webfont.eot");
+    src: url("#{$path-font}/#{$file}-webfont.eot?#iefix") format("embedded-opentype"),
+    url("#{$path-font}/#{$file}-webfont.woff") format("woff"),
+    url("#{$path-font}/#{$file}-webfont.ttf") format("truetype");
+  }
+}
+
+
+/* Text */
+
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+  font-size: $size;
+  line-height: $weight;
+  font-weight: $weight;
+  color: $color;
+}
+
+
+/* Clearfix */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* Contextural backgrounds */
+@mixin bg-variant($parent, $color) {
+  background-color: $color;
+  &:hover,
+  &:focus {
+    background-color: darken($color, 10%);
+  }
+}
+
+/* Drop shadows */
+// Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
+// supported browsers that have box shadow capabilities now support it.
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+/* Transition */
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-border-focus` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+@mixin form-control-focus($color: $color-input-border-focus) {
+  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  &:focus {
+    border-color: $color;
+    outline: 0;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $color-rgba);
+  }
+}
+
+
+// Placeholder text
+@mixin placeholder($color: $color-input-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}

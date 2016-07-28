@@ -60,7 +60,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.include.server.concat(paths.exclude.server), ["babel"]);
   gulp.watch(paths.include.client.concat(paths.exclude.client), ["webpack"]);
   gulp.watch(paths.include.server.concat(paths.exclude.server), ["eslint"]);
-  gulp.watch("client/assets/scss/*.scss", ["sass"]);
+  gulp.watch("client/assets/scss/**/*.scss", ["sass"]);
 });
 
 gulp.task("start", () => {

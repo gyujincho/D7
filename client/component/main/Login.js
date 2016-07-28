@@ -64,10 +64,10 @@ class Login extends Component {
   render() {
     if(!this.state.isSignup){
       return (
-        <div className="text-center login" style={{padding: "6rem 3rem"}}>
-          <h1 className="form-signin-heading">D7</h1>
+        <div className="login-container">
+          <h1>D7</h1>
           <h4>Do something every single day</h4>
-          <form className="form-signin" onSubmit={this.login.bind(this)}>
+          <form onSubmit={this.login.bind(this)}>
             <div className="inputGroup">
               <input type="email" name="email" value={this.state.email} className="form-control" onChange={this.handleChange.bind(this, "email")} placeholder="email" style={{height: "44px"}} required/>
               <input type="password" name="password" value={this.state.password} className="form-control" onChange={this.handleChange.bind(this, "password")} placeholder="password" style={{height: "44px"}} required/>
@@ -86,7 +86,7 @@ class Login extends Component {
       );
     } else {
       return (
-        <div className="text-center login" style={{padding: "6rem 3rem"}}>
+        <div className="login-container">
           <h1 className="form-signin-heading">D7</h1>
           <h4>Do something every single day</h4>
           <form className="form-signin" onSubmit={this.signup.bind(this)}>
