@@ -1,20 +1,33 @@
 .login-header {
-  margin-bottom: 60px;
+  margin-bottom: 5vh;
 }
 
 .login-title {
+  // @media only screen
+  // and (min-device-width: 320px)
+  // and (max-device-width: 480px)
+  // and (-webkit-min-device-pixel-ratio: 2) {
+  //   font-size: 24px;
+  // }
 }
 
 .login-description {
   font-family: $font-family-serif;
-  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.6em;
   font-weight: normal;
+  // @media only screen
+  // and (min-device-width: 320px)
+  // and (max-device-width: 480px)
+  // and (-webkit-min-device-pixel-ratio: 2) {
+  //   font-size: 14px;
+  // }
 }
 
 .login-footer {
   width: 100%;
   position: fixed;
-  bottom: 50px;
+  bottom: 7vh;
   left: -15px;
   font-size: $font-size-base;
 

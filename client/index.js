@@ -10,6 +10,7 @@ import AppContainer from "./container/AppContainer";
 import App from "./component/App";
 import Main from "./component/Main";
 import Login from "./component/main/Login";
+import Signup from "./component/main/Signup";
 import SelectProject from "./component/main/SelectProject";
 import ProjectDetail from "./component/main/ProjectDetail";
 import UserProjectDetail from "./component/main/UserProjectDetail";
@@ -26,6 +27,7 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route component={AppContainer}>
       <Route path="/login" component={Login}/>
+      <Route path="/signup" component={Signup}/>
       <Route component={App}>
         <Route path="/" component={Main}/>
         <Route path="/select" component={SelectProject}/>

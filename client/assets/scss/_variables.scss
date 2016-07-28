@@ -39,6 +39,7 @@ $padding-base-horizontal: 12px;
 
 
 /* Media query breakpoints */
+$brk-mobile-small: "(min-device-width: 320px)";
 $brk-mobile: "(max-width: 500px)";
 $brk-narrow: "(max-width: 768px)";
 $brk-normal: "(max-width: 1024px)";
@@ -50,4 +51,4 @@ $retina: "(-webkit-min-device-pixel-ratio: 2)";
 $input-height-base: 44px;
 
 //** Disabled cursor for form controls and buttons.
-$cursor-disabled:                not-allowed;
+$cursor-disabled: not-allowed;

@@ -197,7 +197,7 @@ th {
 html {
   height: 100%;
   max-height: 100%;
-  font-size: 62.5%;
+  font-size: 50%;
   -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -403,17 +403,18 @@ textarea.form-control {
   margin-bottom: 10px; }
 
 .login-header {
-  margin-bottom: 60px; }
+  margin-bottom: 5vh; }
 
 .login-description {
   font-family: "Merriweather", serif;
-  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.6em;
   font-weight: normal; }
 
 .login-footer {
   width: 100%;
   position: fixed;
-  bottom: 50px;
+  bottom: 7vh;
   left: -15px;
   font-size: 14px; }
   .login-footer a,
